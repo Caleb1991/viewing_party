@@ -1,0 +1,24 @@
+<h1>Create a new Viewing Party</h1>
+<h2>MOVIE TITLE PLACEHOLDER</h2>
+<section id='new-pary-form'>
+  <%= form_with model: @party, url: viewing_party_index_path(current_user), local: true do |form| %>
+    <%= f.label 'Length of Party' %>
+    <%= f.text_field :duration %>
+
+    <%=f.label 'Date' %>
+    <%=f.text_field :date %>
+
+    <%=f.label 'Start Time' %>
+    <%=f.text_field :start_time %>
+
+    <%= if @friends.present? %>
+      <h4>Invite friends: </h4>
+      <%= @friends.each do |friend| %>
+        <%= check_box("Friend #", friend.id) %>
+        <%= friend.email %>
+      <% end %>
+    <% end %>
+
+    <%= f.submit 'Create Viewing Party' %>
+  <% end %>
+</section>
