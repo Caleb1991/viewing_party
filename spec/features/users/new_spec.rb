@@ -14,7 +14,7 @@ RSpec.describe 'Registration Page' do
 
     click_on 'Register New User'
 
-    expect(current_path).to eq('/')
+    expect(current_path).to eq(dashboard_path)
     expect(page).to have_content("Welcome, #{email.downcase}")
   end
 

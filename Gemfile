@@ -26,8 +26,7 @@ gem 'faraday'
 group :development, :test do
   gem 'pry'
   gem 'travis'
-  gem 'webmock'
-  # gem 'vcr'
+  # gem 'webmock'
 end
 
 group :development do
@@ -43,6 +42,8 @@ group :test do
   gem 'launchy'
   gem 'simplecov'
   gem 'shoulda-matchers', '~> 4.0'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
